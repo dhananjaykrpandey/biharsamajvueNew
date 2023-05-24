@@ -27,9 +27,12 @@
                 </div>
             </div>
         </section>
+        
         <main id="main">
+            
             <!-- ======= About Section ======= -->
             <section id="about" class="about">
+                <br/><br>
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-header">
@@ -195,6 +198,7 @@
             </section><!-- End About Section -->
             <!-- ======= Services Section ======= -->
             <section id="services" class="services">
+                <br/><br>
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-header">
@@ -333,6 +337,7 @@
             </section><!-- End Services Section -->
             <!-- ======= Testimonials Section ======= -->
             <section id="testimonials" class="testimonials">
+                <br/><br>
                 <div class="container" data-aos="fade-up">
 
                     <div class="testimonials-slider swiper">
@@ -447,6 +452,7 @@
             </section><!-- End Testimonials Section -->
             <!-- ======= Pricing Section ======= -->
             <section id="pricing" class="pricing">
+                <br/><br>
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-header">
@@ -468,7 +474,7 @@
             <!-- End Pricing Section -->
             <!-- ======= Portfolio Section ======= -->
             <section id="portfolio" class="portfolio" data-aos="fade-up">
-
+                <br/><br>
                 <div class="container">
 
                     <div class="section-header">
@@ -494,7 +500,7 @@
 
                         <div class="row g-0 portfolio-container"  >
 
-                            <!-- <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app" v-for="vImage in ImageLists" :key="vImage.Id">
+                             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app" v-for="vImage in ImageLists" :key="vImage.Id">
                                 <img :src="vImage.Path" class="img-fluid" alt="{{ vImage.name }}" title="{{ vImage.name }}" style="width: 300px; height:300px;">
                                 <div class="portfolio-info">
                                     <h4>{{ vImage.name }}</h4>
@@ -503,7 +509,7 @@
                                     <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                             class="bi bi-link-45deg"></i></a>
                                 </div>
-                            </div> -->
+                            </div> 
                             <!-- <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
                                 <img src="/img/portfolio/1.jpg" class="img-fluid" alt="">
                                 <div class="portfolio-info">
@@ -534,6 +540,7 @@
             <!-- End Portfolio Section -->
             <!-- ======= Pricing Section ======= -->
             <section id="video" class="pricing">
+                <br/><br>
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-header">
@@ -555,6 +562,7 @@
             <!-- End Pricing Section -->
             <!-- ======= Team Section ======= -->
             <section id="team" class="team">
+                <br/><br>
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-header">
@@ -686,6 +694,7 @@
             <!-- End Recent Blog Posts Section -->
             <!-- ======= Contact Section ======= -->
             <section id="contact" class="contact">
+                <br/><br>
                 <div class="container">
 
                     <div class="section-header">
@@ -774,13 +783,13 @@
                 </div>
             </section><!-- End Contact Section -->
 
-
-        </main>
+</main> 
+    
     </div>
     <!-- End #main -->
 </template>
 <script>
-//import axios from 'axios';
+import axios from 'axios';
 export default {
     name: "HomePage",
     //el: '#ImageLists',
@@ -798,10 +807,10 @@ export default {
       
     ]
     };
-    // return {
-    //   posts: [],
-    // };
-  },
+//     return {
+//       posts: [],
+//     };
+//   },
 
 //   methods: {
 //     async getData() 
@@ -814,7 +823,7 @@ export default {
 //         console.log(error);
 //       }
 //     },
-//   },
+  },
 
 
 }
