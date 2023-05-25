@@ -29,24 +29,18 @@
 
             
                         <ul>
-
-
-                            <li style="float: left; margin: 5px;"  v-for="vImage in posts" :key="vImage.Id">
-
-                                <a v-bind:href="vImage.url" v-bind:title="vImage.description"
+                            <li style="float:left; margin:5px;">
+                                <a  href="https://scontent.ffjr1-3.fna.fbcdn.net/v/t39.30808-6/342183373_238896911981000_2885239457315152548_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2zvNA52EmcEAX82nBGo&_nc_ht=scontent.ffjr1-3.fna&oh=00_AfBfUKJEadO3lNegqg_u2moKYw7Ui0hE_Dneh8RSyC4Faw&oe=6474B3DB" 
                                     class="glightbox">
-
-                                    <img :src="vImage.url" class="img-fluid" v-bind:alt="vImage.description"
-                                    v-bind:title="vImage.description" style="width: 300px; height:300px;" />
-
+                                    <img src="https://scontent.ffjr1-3.fna.fbcdn.net/v/t39.30808-6/342183373_238896911981000_2885239457315152548_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2zvNA52EmcEAX82nBGo&_nc_ht=scontent.ffjr1-3.fna&oh=00_AfBfUKJEadO3lNegqg_u2moKYw7Ui0hE_Dneh8RSyC4Faw&oe=6474B3DB" class="img-fluid"   style="width: 300px; height:300px;" />
                                 </a>
-
-
                             </li>
 
-
-
-                          
+                            <li style="float:left; margin:5px;">
+                                <a  href="https://scontent.ffjr1-3.fna.fbcdn.net/v/t39.30808-6/342183373_238896911981000_2885239457315152548_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2zvNA52EmcEAX82nBGo&_nc_ht=scontent.ffjr1-3.fna&oh=00_AfBfUKJEadO3lNegqg_u2moKYw7Ui0hE_Dneh8RSyC4Faw&oe=6474B3DB"  class="glightbox">
+                                    <img src="https://scontent.ffjr1-3.fna.fbcdn.net/v/t39.30808-6/342183373_238896911981000_2885239457315152548_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2zvNA52EmcEAX82nBGo&_nc_ht=scontent.ffjr1-3.fna&oh=00_AfBfUKJEadO3lNegqg_u2moKYw7Ui0hE_Dneh8RSyC4Faw&oe=6474B3DB" class="img-fluid"  style="width: 300px; height:300px;" />
+                                </a>
+                            </li>                         
                         </ul>
                         <!-- <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item" v-for="vImage in posts" :key="vImage.Id">
                                 <img :src="vImage.url" class="img-fluid" v-bind:alt="vImage.description"
