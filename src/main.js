@@ -1,5 +1,5 @@
 //import './assets/main.css'
-import './assets/styles.scss';
+import './assets/styles.scss'
 import 'vue-easy-lightbox/external-css/vue-easy-lightbox.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

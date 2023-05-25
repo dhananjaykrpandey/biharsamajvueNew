@@ -1,24 +1,29 @@
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: https://codemirror.net/LICENSE
 
-(function (mod) {
-  if (typeof exports == "object" && typeof module == "object") // CommonJS
-    mod(require("../../lib/codemirror"), require("../yaml/yaml"))
-  else if (typeof define == "function" && define.amd) // AMD
-    define(["../../lib/codemirror", "../yaml/yaml"], mod)
-  else // Plain browser env
-    mod(CodeMirror)
+;(function (mod) {
+  if (typeof exports == 'object' && typeof module == 'object')
+    // CommonJS
+    mod(require('../../lib/codemirror'), require('../yaml/yaml'))
+  else if (typeof define == 'function' && define.amd)
+    // AMD
+    define(['../../lib/codemirror', '../yaml/yaml'], mod)
+  // Plain browser env
+  else mod(CodeMirror)
 })(function (CodeMirror) {
-
-  var START = 0, FRONTMATTER = 1, BODY = 2
+  var START = 0,
+    FRONTMATTER = 1,
+    BODY = 2
 
   // a mixed mode for Markdown text with an optional YAML front matter
-  CodeMirror.defineMode("yaml-frontmatter", function (config, parserConfig) {
-    var yamlMode = CodeMirror.getMode(config, "yaml")
-    var innerMode = CodeMirror.getMode(config, parserConfig && parserConfig.base || "gfm")
+  CodeMirror.defineMode('yaml-frontmatter', function (config, parserConfig) {
+    var yamlMode = CodeMirror.getMode(config, 'yaml')
+    var innerMode = CodeMirror.getMode(config, (parserConfig && parserConfig.base) || 'gfm')
 
     function localMode(state) {
-      return state.state == FRONTMATTER ? {mode: yamlMode, state: state.yaml} : {mode: innerMode, state: state.inner}
+      return state.state == FRONTMATTER
+        ? { mode: yamlMode, state: state.yaml }
+        : { mode: innerMode, state: state.inner }
     }
 
     return {
@@ -59,7 +64,7 @@
         }
       },
       innerMode: localMode,
-      indent: function(state, a, b) {
+      indent: function (state, a, b) {
         var m = localMode(state)
         return m.mode.indent ? m.mode.indent(m.state, a, b) : CodeMirror.Pass
       },
@@ -69,4 +74,4 @@
       }
     }
   })
-});
+})

@@ -1,211 +1,181 @@
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
 
-(function(mod) {
-  if (typeof exports == "object" && typeof module == "object") // CommonJS
-    mod(require("../../lib/codemirror"));
-  else if (typeof define == "function" && define.amd) // AMD
-    define(["../../lib/codemirror"], mod);
-  else // Plain browser env
-    mod(CodeMirror);
-})(function(CodeMirror) {
-  "use strict";
+;(function (mod) {
+  if (typeof exports == 'object' && typeof module == 'object')
+    // CommonJS
+    mod(require('../../lib/codemirror'))
+  else if (typeof define == 'function' && define.amd)
+    // AMD
+    define(['../../lib/codemirror'], mod)
+  // Plain browser env
+  else mod(CodeMirror)
+})(function (CodeMirror) {
+  'use strict'
 
-  CodeMirror.defineMode("elm", function() {
-
-    function switchState(source, setState, f)
-    {
-      setState(f);
-      return f(source, setState);
+  CodeMirror.defineMode('elm', function () {
+    function switchState(source, setState, f) {
+      setState(f)
+      return f(source, setState)
     }
 
-    var lowerRE = /[a-z]/;
-    var upperRE = /[A-Z]/;
-    var innerRE = /[a-zA-Z0-9_]/;
+    var lowerRE = /[a-z]/
+    var upperRE = /[A-Z]/
+    var innerRE = /[a-zA-Z0-9_]/
 
-    var digitRE = /[0-9]/;
-    var hexRE = /[0-9A-Fa-f]/;
-    var symbolRE = /[-&*+.\\/<>=?^|:]/;
-    var specialRE = /[(),[\]{}]/;
-    var spacesRE = /[ \v\f]/; // newlines are handled in tokenizer
+    var digitRE = /[0-9]/
+    var hexRE = /[0-9A-Fa-f]/
+    var symbolRE = /[-&*+.\\/<>=?^|:]/
+    var specialRE = /[(),[\]{}]/
+    var spacesRE = /[ \v\f]/ // newlines are handled in tokenizer
 
-    function normal()
-    {
-      return function(source, setState)
-      {
-        if (source.eatWhile(spacesRE))
-        {
-          return null;
+    function normal() {
+      return function (source, setState) {
+        if (source.eatWhile(spacesRE)) {
+          return null
         }
 
-        var char = source.next();
+        var char = source.next()
 
-        if (specialRE.test(char))
-        {
-          return (char === '{' && source.eat('-'))
+        if (specialRE.test(char)) {
+          return char === '{' && source.eat('-')
             ? switchState(source, setState, chompMultiComment(1))
-            : (char === '[' && source.match('glsl|'))
-                ? switchState(source, setState, chompGlsl)
-                : 'builtin';
+            : char === '[' && source.match('glsl|')
+            ? switchState(source, setState, chompGlsl)
+            : 'builtin'
         }
 
-        if (char === '\'')
-        {
-          return switchState(source, setState, chompChar);
+        if (char === "'") {
+          return switchState(source, setState, chompChar)
         }
 
-        if (char === '"')
-        {
+        if (char === '"') {
           return source.eat('"')
             ? source.eat('"')
-                ? switchState(source, setState, chompMultiString)
-                : 'string'
-            : switchState(source, setState, chompSingleString);
+              ? switchState(source, setState, chompMultiString)
+              : 'string'
+            : switchState(source, setState, chompSingleString)
         }
 
-        if (upperRE.test(char))
-        {
-          source.eatWhile(innerRE);
-          return 'variable-2';
+        if (upperRE.test(char)) {
+          source.eatWhile(innerRE)
+          return 'variable-2'
         }
 
-        if (lowerRE.test(char))
-        {
-          var isDef = source.pos === 1;
-          source.eatWhile(innerRE);
-          return isDef ? "def" : "variable";
+        if (lowerRE.test(char)) {
+          var isDef = source.pos === 1
+          source.eatWhile(innerRE)
+          return isDef ? 'def' : 'variable'
         }
 
-        if (digitRE.test(char))
-        {
-          if (char === '0')
-          {
-            if (source.eat(/[xX]/))
-            {
-              source.eatWhile(hexRE); // should require at least 1
-              return "number";
+        if (digitRE.test(char)) {
+          if (char === '0') {
+            if (source.eat(/[xX]/)) {
+              source.eatWhile(hexRE) // should require at least 1
+              return 'number'
             }
+          } else {
+            source.eatWhile(digitRE)
           }
-          else
-          {
-            source.eatWhile(digitRE);
+          if (source.eat('.')) {
+            source.eatWhile(digitRE) // should require at least 1
           }
-          if (source.eat('.'))
-          {
-            source.eatWhile(digitRE); // should require at least 1
+          if (source.eat(/[eE]/)) {
+            source.eat(/[-+]/)
+            source.eatWhile(digitRE) // should require at least 1
           }
-          if (source.eat(/[eE]/))
-          {
-            source.eat(/[-+]/);
-            source.eatWhile(digitRE); // should require at least 1
-          }
-          return "number";
+          return 'number'
         }
 
-        if (symbolRE.test(char))
-        {
-          if (char === '-' && source.eat('-'))
-          {
-            source.skipToEnd();
-            return "comment";
+        if (symbolRE.test(char)) {
+          if (char === '-' && source.eat('-')) {
+            source.skipToEnd()
+            return 'comment'
           }
-          source.eatWhile(symbolRE);
-          return "keyword";
+          source.eatWhile(symbolRE)
+          return 'keyword'
         }
 
-        if (char === '_')
-        {
-          return "keyword";
+        if (char === '_') {
+          return 'keyword'
         }
 
-        return "error";
+        return 'error'
       }
     }
 
-    function chompMultiComment(nest)
-    {
-      if (nest == 0)
-      {
-        return normal();
+    function chompMultiComment(nest) {
+      if (nest == 0) {
+        return normal()
       }
-      return function(source, setState)
-      {
-        while (!source.eol())
-        {
-          var char = source.next();
-          if (char == '{' && source.eat('-'))
-          {
-            ++nest;
-          }
-          else if (char == '-' && source.eat('}'))
-          {
-            --nest;
-            if (nest === 0)
-            {
-              setState(normal());
-              return 'comment';
+      return function (source, setState) {
+        while (!source.eol()) {
+          var char = source.next()
+          if (char == '{' && source.eat('-')) {
+            ++nest
+          } else if (char == '-' && source.eat('}')) {
+            --nest
+            if (nest === 0) {
+              setState(normal())
+              return 'comment'
             }
           }
         }
-        setState(chompMultiComment(nest));
-        return 'comment';
+        setState(chompMultiComment(nest))
+        return 'comment'
       }
     }
 
-    function chompMultiString(source, setState)
-    {
-      while (!source.eol())
-      {
-        var char = source.next();
-        if (char === '"' && source.eat('"') && source.eat('"'))
-        {
-          setState(normal());
-          return 'string';
+    function chompMultiString(source, setState) {
+      while (!source.eol()) {
+        var char = source.next()
+        if (char === '"' && source.eat('"') && source.eat('"')) {
+          setState(normal())
+          return 'string'
         }
       }
-      return 'string';
+      return 'string'
     }
 
-    function chompSingleString(source, setState)
-    {
-      while (source.skipTo('\\"')) { source.next(); source.next(); }
-      if (source.skipTo('"'))
-      {
-        source.next();
-        setState(normal());
-        return 'string';
+    function chompSingleString(source, setState) {
+      while (source.skipTo('\\"')) {
+        source.next()
+        source.next()
       }
-      source.skipToEnd();
-      setState(normal());
-      return 'error';
-    }
-
-    function chompChar(source, setState)
-    {
-      while (source.skipTo("\\'")) { source.next(); source.next(); }
-      if (source.skipTo("'"))
-      {
-        source.next();
-        setState(normal());
-        return 'string';
+      if (source.skipTo('"')) {
+        source.next()
+        setState(normal())
+        return 'string'
       }
-      source.skipToEnd();
-      setState(normal());
-      return 'error';
+      source.skipToEnd()
+      setState(normal())
+      return 'error'
     }
 
-    function chompGlsl(source, setState)
-    {
-      while (!source.eol())
-      {
-        var char = source.next();
-        if (char === '|' && source.eat(']'))
-        {
-          setState(normal());
-          return 'string';
+    function chompChar(source, setState) {
+      while (source.skipTo("\\'")) {
+        source.next()
+        source.next()
+      }
+      if (source.skipTo("'")) {
+        source.next()
+        setState(normal())
+        return 'string'
+      }
+      source.skipToEnd()
+      setState(normal())
+      return 'error'
+    }
+
+    function chompGlsl(source, setState) {
+      while (!source.eol()) {
+        var char = source.next()
+        if (char === '|' && source.eat(']')) {
+          setState(normal())
+          return 'string'
         }
       }
-      return 'string';
+      return 'string'
     }
 
     var wellKnownWords = {
@@ -224,20 +194,25 @@
       import: 1,
       exposing: 1,
       port: 1
-    };
+    }
 
     return {
-      startState: function ()  { return { f: normal() }; },
-      copyState:  function (s) { return { f: s.f }; },
+      startState: function () {
+        return { f: normal() }
+      },
+      copyState: function (s) {
+        return { f: s.f }
+      },
 
-      token: function(stream, state) {
-        var type = state.f(stream, function(s) { state.f = s; });
-        var word = stream.current();
-        return (wellKnownWords.hasOwnProperty(word)) ? 'keyword' : type;
+      token: function (stream, state) {
+        var type = state.f(stream, function (s) {
+          state.f = s
+        })
+        var word = stream.current()
+        return wellKnownWords.hasOwnProperty(word) ? 'keyword' : type
       }
-    };
+    }
+  })
 
-  });
-
-  CodeMirror.defineMIME("text/x-elm", "elm");
-});
+  CodeMirror.defineMIME('text/x-elm', 'elm')
+})
