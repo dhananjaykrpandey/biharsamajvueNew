@@ -75,7 +75,7 @@ export default {
     try {
       //const response =https://localhost:7104/api/ http://localhost:5072/api/
       axios
-        .get("https://localhost:7104/api/GalleryAlbum/JsonGetImageAlbum")
+        .get("http://localhost:5072/api/GalleryAlbum/JsonGetImageAlbum")
         .then((response) => {
           this.posts = response.data;
         });

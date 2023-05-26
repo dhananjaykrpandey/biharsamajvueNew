@@ -28,20 +28,13 @@
 
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
         <ul>
-          <li style="float: left; margin: 5px">
-            <a
-              href="https://scontent.ffjr1-3.fna.fbcdn.net/v/t39.30808-6/342183373_238896911981000_2885239457315152548_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2zvNA52EmcEAX82nBGo&_nc_ht=scontent.ffjr1-3.fna&oh=00_AfBfUKJEadO3lNegqg_u2moKYw7Ui0hE_Dneh8RSyC4Faw&oe=6474B3DB"
-              class="glightbox"
-            >
-              <img
-                src="https://scontent.ffjr1-3.fna.fbcdn.net/v/t39.30808-6/342183373_238896911981000_2885239457315152548_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2zvNA52EmcEAX82nBGo&_nc_ht=scontent.ffjr1-3.fna&oh=00_AfBfUKJEadO3lNegqg_u2moKYw7Ui0hE_Dneh8RSyC4Faw&oe=6474B3DB"
-                class="img-fluid"
-                style="width: 300px; height: 300px"
-              />
+          <li style="float: left; margin: 5px"  v-for="vImage in posts" :key="vImage.Id">
+            <a v-bind:href="vImage.filePath" class="glightbox" >
+              <img :src="vImage.filePath" class="img-fluid" style="width: 300px; height: 300px" v-bind:alt="vImage.fileName" v-bind:title="vImage.description"/>
             </a>
           </li>
 
-          <li style="float: left; margin: 5px">
+          <!-- <li style="float: left; margin: 5px">
             <a
               href="https://scontent.ffjr1-3.fna.fbcdn.net/v/t39.30808-6/342183373_238896911981000_2885239457315152548_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2zvNA52EmcEAX82nBGo&_nc_ht=scontent.ffjr1-3.fna&oh=00_AfBfUKJEadO3lNegqg_u2moKYw7Ui0hE_Dneh8RSyC4Faw&oe=6474B3DB"
               class="glightbox"
@@ -52,7 +45,7 @@
                 style="width: 300px; height: 300px"
               />
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- End Portfolio Container -->
@@ -81,7 +74,7 @@ export default {
       //const response =
       console.log(this.$route.params.Title);
       const vars = this.$route.params.Title;
-      const urls = "https://localhost:7104/api/GalleryAlbum/JosnGetGalleryImage/" + vars;
+      const urls = "http://localhost:5072/api/GalleryAlbum/JosnGetGalleryImage/" + vars;
       console.log(urls);
       axios.get(urls).then((response) => {
         this.posts = response.data;
