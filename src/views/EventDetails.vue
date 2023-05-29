@@ -1,5 +1,5 @@
 <template>
-  <div class="AboutUs">
+    <div class="EventDetails">
     <div class="breadcrumbs">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
@@ -17,9 +17,8 @@
       <div class="container" data-aos="fade-up">
         <div class="col-lg-12">
           <section id="" class="services">
-            <div class="container" data-aos="fade-up">
-              <img src="/img/under-construction.gif"/>
-            </div>
+            <div class="container" data-aos="fade-up"></div>
+            <img src="/img/under-construction.gif"/>
           </section>
         </div>
       </div>
@@ -30,10 +29,10 @@
 </template>
 <script>
 export default {
-  name: 'AboutUs',
+  name: 'EventDetails',
   data() {
     return {
-      msg: 'Welcome to gallery'
+      msg: 'Welcome to Event Details'
     }
   }
 }

@@ -214,9 +214,9 @@
                   <div class="icon">
                     <i class="bi bi-activity"></i>
                   </div>
-                  <a href="#" class="stretched-link">
+                  <router-link to="/EventDetails/ChhatPuja" class="stretched-link">
                     <h3>Chhat Puja</h3>
-                  </a>
+                  </router-link>
                   <p>
                     Chhath Puja, also known as Chhath Parva, is a Hindu festival dedicated to the Sun God, Lord Surya, and
                     Chhathi Maiya, the goddess who is believed to be the sister of Lord Surya. It is primarily celebrated
@@ -225,6 +225,9 @@
                   <p>
                     Bihar Samaj Abu-Dhabi Oragniz chhath puja every year with the help of our socity people.
                   </p>
+                  <div class="text-center mt-auto">
+                    <router-link to="/EventDetails/ChhatPuja" class="buy-btn">Know More</router-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -239,9 +242,9 @@
                   <div class="icon">
                     <i class="bi bi-broadcast"></i>
                   </div>
-                  <a href="#" class="stretched-link">
+                  <router-link to="/EventDetails/VatSawitriPuja" class="stretched-link">
                     <h3>Vat Sawitri Puja</h3>
-                  </a>
+                  </router-link>
                   <p>
                     Vat Savitri Puja, also known as Vat Purnima or Vat Savitri Vrat, is a Hindu festival observed by
                     married women in some parts of India, particularly in the states of Maharashtra, Gujarat, Karnataka,
@@ -250,7 +253,9 @@
                   <p>
                     Bihar Samaj Abu-Dhabi Oragniz Vat Savitri puja every year with the help of our socity people.
                   </p>
-
+                  <div class="text-center mt-auto">
+                    <router-link to="/EventDetails/VatSawitriPuja" class="buy-btn">Know More</router-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -263,9 +268,9 @@
                   <div class="icon">
                     <i class="bi bi-calendar4-week"></i>
                   </div>
-                  <a href="#" class="stretched-link">
+                  <router-link to="/EventDetails/ChhatPuja" class="stretched-link">
                     <h3>Makar Sankranti</h3>
-                  </a>
+                  </router-link>
                   <p>
                     Makar Sankranti, also known as Sankranti or Maghi, is a Hindu festival celebrated in various parts of
                     India and Nepal. It marks the transition of the Sun into the zodiac sign of Capricorn (Makar) on its
@@ -275,7 +280,9 @@
                     Bihar Samaj Abu-Dhabi Oragniz Makar Sankranti celebration every year with the help of our socity
                     people.
                   </p>
-                  <a href="#" class="stretched-link"></a>
+                  <div class="text-center mt-auto">
+                    <router-link to="/EventDetails/MakarSankranti" class="buy-btn">Know More</router-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -289,15 +296,17 @@
                   <div class="icon">
                     <i class="bi bi-bounding-box-circles"></i>
                   </div>
-                  <a href="#" class="stretched-link">
+                  <router-link to="/EventDetails/Holi" class="stretched-link">
                     <h3>Holi</h3>
-                  </a>
+                  </router-link>
                   <p>
                     Holi is a vibrant and colorful Hindu festival celebrated primarily in India and Nepal. It is known as
                     the "Festival of Colors" and usually takes place in March, on the full moon day of the Hindu month of
                     Phalguna.
                   </p>
-                  <a href="#" class="stretched-link"></a>
+                  <div class="text-center mt-auto">
+                    <router-link to="/EventDetails/Holi" class="buy-btn"> Know More</router-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -318,6 +327,9 @@
                     Bihari dish called Litti Chokha. Litti Chokha is a delicious and filling dish that originated in the
                     Indian state of Bihar and is enjoyed by people across different regions.
                   </p>
+                  <div class="text-center mt-auto">
+                    <router-link to="/EventDetails/LittiChokhaPartry" class="buy-btn">Know More</router-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -330,15 +342,20 @@
                   <div class="icon">
                     <i class="bi bi-easel"></i>
                   </div>
-                  <a href="#" class="stretched-link">
+                  <router-link to="/EventDetails/ChhatPuja" class="stretched-link">
                     <h3>Abu dhabi BAPS Temple Visit</h3>
-                  </a>
+                  </router-link>
                   <p>
                     The BAPS Shri Swaminarayan Mandir in Abu Dhabi is a beautiful Hindu temple and cultural complex
                     located in the capital city of the United Arab Emirates. It is the first traditional Hindu temple in
-                    the UAE.Visiting the BAPS Mandir in Abu Dhabi can provide a unique and enriching experience. Here are some
+                    the UAE.Visiting the BAPS Mandir in Abu Dhabi can provide a unique and enriching experience. Here are
+                    some
                     details to keep in mind:
                   </p>
+                  <div class="text-center mt-auto">
+                    <router-link to="/EventDetails/BAPSTempleVisit" class="buy-btn">Know More </router-link>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -387,17 +404,15 @@
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <img src="/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="" />
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
+                  <h3>Abhishek Sharma</h3>
+                  <h4>Founder</h4>
                   <div class="stars">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                       class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora
-                    entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam
-                    eget nibh et. Maecen aliquam, risus at semper.
+                   No comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -407,7 +422,7 @@
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <img src="/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
-                  <h3>Sara Wilsson</h3>
+                  <h3>Jai Prakash</h3>
                   <h4>Designer</h4>
                   <div class="stars">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -415,9 +430,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem
-                    cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
-                    noster fugiat irure amet legam anim culpa.
+                   No comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -427,7 +440,7 @@
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <img src="/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="" />
-                  <h3>Jena Karlis</h3>
+                  <h3>Manoj Kumar</h3>
                   <h4>Store Owner</h4>
                   <div class="stars">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -435,9 +448,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum
-                    nulla quem veniam duis minim tempor labore quem eram duis noster aute
-                    amet eram fore quis sint minim.
+                  No Comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -447,7 +458,7 @@
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <img src="/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="" />
-                  <h3>Matt Brandon</h3>
+                  <h3>Munna Kumar</h3>
                   <h4>Freelancer</h4>
                   <div class="stars">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -455,9 +466,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos
-                    export minim fugiat minim velit minim dolor enim duis veniam ipsum
-                    anim magna sunt elit fore quem dolore labore illum veniam.
+                  No comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -467,8 +476,8 @@
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <img src="/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
+                  <h3>Ravi Pratap</h3>
+                  <h4>Media Head</h4>
                   <div class="stars">
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                       class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
