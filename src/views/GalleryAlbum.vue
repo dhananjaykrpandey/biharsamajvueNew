@@ -28,13 +28,21 @@
                 >
                   <div class="service-item">
                     <div class="img">
-                      <img
+                      <!-- <img
                         :src="vImage.url"
-                        class="img-fluid"
+                        class="img-fluid fb-post"
                         v-bind:alt="vImage.description"
                         v-bind:title="vImage.description"
                         style="width: 1024px; height: 300px"
-                      />
+                      /> -->
+                      <div
+                        class="fb-post"
+                        :data-href="vImage.url"
+                        data-width="100"
+                        v-bind:alt="vImage.description"
+                        v-bind:title="vImage.description"
+                        style="width: 1024px; height: 300px"
+                      ></div>
                     </div>
                     <div class="details position-relative">
                       <router-link
@@ -74,8 +82,12 @@ export default {
   mounted() {
     try {
       //const response =https://localhost:7104/api/ http://localhost:5072/api/
+      var apihostname = this.$apihostname;
+      //console.log(apihostname);
+      var apipath = apihostname.concat("/api/GalleryAlbum/JsonGetImageAlbum");
+      //console.log(apipath);
       axios
-        .get("http://localhost:5072/api/GalleryAlbum/JsonGetImageAlbum")
+        .get(apipath) //http://localhost:5072/api/GalleryAlbum/JsonGetImageAlbum
         .then((response) => {
           this.posts = response.data;
         });

@@ -28,9 +28,15 @@
 
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
         <ul>
-          <li style="float: left; margin: 5px"  v-for="vImage in posts" :key="vImage.Id">
-            <a v-bind:href="vImage.filePath" class="glightbox" >
-              <img :src="vImage.filePath" class="img-fluid" style="width: 300px; height: 300px" v-bind:alt="vImage.fileName" v-bind:title="vImage.description"/>
+          <li style="float: left; margin: 5px" v-for="vImage in posts" :key="vImage.Id">
+            <a v-bind:href="vImage.filePath" class="glightbox">
+              <img
+                :src="vImage.filePath"
+                class="img-fluid"
+                style="width: 300px; height: 300px"
+                v-bind:alt="vImage.fileName"
+                v-bind:title="vImage.description"
+              />
             </a>
           </li>
 
@@ -74,7 +80,12 @@ export default {
       //const response =
       console.log(this.$route.params.Title);
       const vars = this.$route.params.Title;
-      const urls = "http://localhost:5072/api/GalleryAlbum/JosnGetGalleryImage/" + vars;
+      var apihostname = this.$apihostname;
+      //console.log(apihostname);
+      var apipath = apihostname.concat("/api/GalleryAlbum/JsonGetImageAlbum");
+      //console.log(apipath);
+      //http://localhost:5072/api/GalleryAlbum/JsonGetImageAlbum
+      const urls = apihostname.concat("/api/GalleryAlbum/JosnGetGalleryImage/") + vars;
       console.log(urls);
       axios.get(urls).then((response) => {
         this.posts = response.data;

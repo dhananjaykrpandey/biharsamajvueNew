@@ -10,6 +10,7 @@ import VueEasyLightbox from 'vue-easy-lightbox'
 
 //import axios from 'axios'
 const app = createApp(App)
+app.config.globalProperties.$apihostname='https://localhost:7104'//http://localhost:5072
 
 app.use(createPinia())
 

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+
+</script>
 <style>
 .ImageSize {
   width: 400px;
@@ -13,8 +15,10 @@
 <template>
   <div class="HomePage">
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
-      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
-        data-aos="zoom-out">
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+        data-aos="zoom-out"
+      >
         <img src="/img/logo-2.jpg" class="img-fluid animated" />
         <h2><span>Bihar Samaj - Abu Dhabi UAE</span></h2>
         <!-- <h4><span>ख्वाहिश नहीं मुझे,मशहूर होने की,आप मुझे पहचानते हो,बस इतना ही काफी है,</span></h4> -->
@@ -57,7 +61,9 @@
               <!-- Tabs -->
               <ul class="nav nav-pills mb-3">
                 <li>
-                  <a class="nav-link active" data-bs-toggle="pill" href="#tab1">About Bihar Samaj UAE</a>
+                  <a class="nav-link active" data-bs-toggle="pill" href="#tab1"
+                    >About Bihar Samaj UAE</a
+                  >
                 </li>
                 <!-- <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Our Moto</a></li>
                             <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Our Mission</a></li> -->
@@ -218,15 +224,19 @@
                     <h3>Chhat Puja</h3>
                   </router-link>
                   <p>
-                    Chhath Puja, also known as Chhath Parva, is a Hindu festival dedicated to the Sun God, Lord Surya, and
-                    Chhathi Maiya, the goddess who is believed to be the sister of Lord Surya. It is primarily celebrated
-                    in the Indian states of Bihar, Jharkhand, and Uttar Pradesh.
+                    Chhath Puja, also known as Chhath Parva, is a Hindu festival dedicated
+                    to the Sun God, Lord Surya, and Chhathi Maiya, the goddess who is
+                    believed to be the sister of Lord Surya. It is primarily celebrated in
+                    the Indian states of Bihar, Jharkhand, and Uttar Pradesh.
                   </p>
                   <p>
-                    Bihar Samaj Abu-Dhabi Oragniz chhath puja every year with the help of our socity people.
+                    Bihar Samaj Abu-Dhabi Oragniz chhath puja every year with the help of
+                    our socity people.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/ChhatPuja" class="buy-btn">Know More</router-link>
+                    <router-link to="/EventDetails/ChhatPuja" class="buy-btn"
+                      >Know More</router-link
+                    >
                   </div>
                 </div>
               </div>
@@ -246,15 +256,19 @@
                     <h3>Vat Sawitri Puja</h3>
                   </router-link>
                   <p>
-                    Vat Savitri Puja, also known as Vat Purnima or Vat Savitri Vrat, is a Hindu festival observed by
-                    married women in some parts of India, particularly in the states of Maharashtra, Gujarat, Karnataka,
-                    and Uttar Pradesh.
+                    Vat Savitri Puja, also known as Vat Purnima or Vat Savitri Vrat, is a
+                    Hindu festival observed by married women in some parts of India,
+                    particularly in the states of Maharashtra, Gujarat, Karnataka, and
+                    Uttar Pradesh.
                   </p>
                   <p>
-                    Bihar Samaj Abu-Dhabi Oragniz Vat Savitri puja every year with the help of our socity people.
+                    Bihar Samaj Abu-Dhabi Oragniz Vat Savitri puja every year with the
+                    help of our socity people.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/VatSawitriPuja" class="buy-btn">Know More</router-link>
+                    <router-link to="/EventDetails/VatSawitriPuja" class="buy-btn"
+                      >Know More</router-link
+                    >
                   </div>
                 </div>
               </div>
@@ -272,16 +286,20 @@
                     <h3>Makar Sankranti</h3>
                   </router-link>
                   <p>
-                    Makar Sankranti, also known as Sankranti or Maghi, is a Hindu festival celebrated in various parts of
-                    India and Nepal. It marks the transition of the Sun into the zodiac sign of Capricorn (Makar) on its
-                    celestial path, and it usually falls on January 14th or 15th, depending on the Hindu calendar.
+                    Makar Sankranti, also known as Sankranti or Maghi, is a Hindu festival
+                    celebrated in various parts of India and Nepal. It marks the
+                    transition of the Sun into the zodiac sign of Capricorn (Makar) on its
+                    celestial path, and it usually falls on January 14th or 15th,
+                    depending on the Hindu calendar.
                   </p>
                   <p>
-                    Bihar Samaj Abu-Dhabi Oragniz Makar Sankranti celebration every year with the help of our socity
-                    people.
+                    Bihar Samaj Abu-Dhabi Oragniz Makar Sankranti celebration every year
+                    with the help of our socity people.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/MakarSankranti" class="buy-btn">Know More</router-link>
+                    <router-link to="/EventDetails/MakarSankranti" class="buy-btn"
+                      >Know More</router-link
+                    >
                   </div>
                 </div>
               </div>
@@ -300,12 +318,15 @@
                     <h3>Holi</h3>
                   </router-link>
                   <p>
-                    Holi is a vibrant and colorful Hindu festival celebrated primarily in India and Nepal. It is known as
-                    the "Festival of Colors" and usually takes place in March, on the full moon day of the Hindu month of
+                    Holi is a vibrant and colorful Hindu festival celebrated primarily in
+                    India and Nepal. It is known as the "Festival of Colors" and usually
+                    takes place in March, on the full moon day of the Hindu month of
                     Phalguna.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/Holi" class="buy-btn"> Know More</router-link>
+                    <router-link to="/EventDetails/Holi" class="buy-btn">
+                      Know More</router-link
+                    >
                   </div>
                 </div>
               </div>
@@ -323,12 +344,15 @@
                     <h3>Litti Chokha Partry</h3>
                   </a>
                   <p>
-                    "Litti Chokha Party" refers to a popular food gathering or event that revolves around the traditional
-                    Bihari dish called Litti Chokha. Litti Chokha is a delicious and filling dish that originated in the
-                    Indian state of Bihar and is enjoyed by people across different regions.
+                    "Litti Chokha Party" refers to a popular food gathering or event that
+                    revolves around the traditional Bihari dish called Litti Chokha. Litti
+                    Chokha is a delicious and filling dish that originated in the Indian
+                    state of Bihar and is enjoyed by people across different regions.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/LittiChokhaPartry" class="buy-btn">Know More</router-link>
+                    <router-link to="/EventDetails/LittiChokhaPartry" class="buy-btn"
+                      >Know More</router-link
+                    >
                   </div>
                 </div>
               </div>
@@ -346,24 +370,23 @@
                     <h3>Abu dhabi BAPS Temple Visit</h3>
                   </router-link>
                   <p>
-                    The BAPS Shri Swaminarayan Mandir in Abu Dhabi is a beautiful Hindu temple and cultural complex
-                    located in the capital city of the United Arab Emirates. It is the first traditional Hindu temple in
-                    the UAE.Visiting the BAPS Mandir in Abu Dhabi can provide a unique and enriching experience. Here are
-                    some
-                    details to keep in mind:
+                    The BAPS Shri Swaminarayan Mandir in Abu Dhabi is a beautiful Hindu
+                    temple and cultural complex located in the capital city of the United
+                    Arab Emirates. It is the first traditional Hindu temple in the
+                    UAE.Visiting the BAPS Mandir in Abu Dhabi can provide a unique and
+                    enriching experience. Here are some details to keep in mind:
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/BAPSTempleVisit" class="buy-btn">Know More </router-link>
+                    <router-link to="/EventDetails/BAPSTempleVisit" class="buy-btn"
+                      >Know More
+                    </router-link>
                   </div>
-
                 </div>
               </div>
             </div>
             <!-- End Service Item -->
 
-
             <!-- End Service Item -->
-
 
             <!-- End Service Item -->
             <!-- 
@@ -403,16 +426,21 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="" />
+                  <img
+                    src="/img/testimonials/testimonials-1.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
                   <h3>Abhishek Sharma</h3>
                   <h4>Founder</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                   No comment
+                    No comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -421,16 +449,21 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
+                  <img
+                    src="/img/testimonials/testimonials-2.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
                   <h3>Jai Prakash</h3>
                   <h4>Designer</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                   No comment
+                    No comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -439,16 +472,21 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="" />
+                  <img
+                    src="/img/testimonials/testimonials-3.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
                   <h3>Manoj Kumar</h3>
                   <h4>Store Owner</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                  No Comment
+                    No Comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -457,16 +495,21 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="" />
+                  <img
+                    src="/img/testimonials/testimonials-4.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
                   <h3>Munna Kumar</h3>
                   <h4>Freelancer</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                  No comment
+                    No comment
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -475,12 +518,17 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
+                  <img
+                    src="/img/testimonials/testimonials-5.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
                   <h3>Ravi Pratap</h3>
                   <h4>Media Head</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
@@ -509,7 +557,13 @@
           <div class="row gy-4"></div>
           <br />
           <div class="text-center mt-auto">
-            <a asp-action="Create" asp-controller="EventBooking" class="buy-btn" target="_blank">Book Now</a>
+            <a
+              asp-action="Create"
+              asp-controller="EventBooking"
+              class="buy-btn"
+              target="_blank"
+              >Book Now</a
+            >
           </div>
         </div>
       </section>
@@ -529,8 +583,12 @@
         </div>
 
         <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
-          <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
-            data-portfolio-sort="original-order">
+          <div
+            class="portfolio-isotope"
+            data-portfolio-filter="*"
+            data-portfolio-layout="masonry"
+            data-portfolio-sort="original-order"
+          >
             <!--<ul class="portfolio-flters">
                     <li data-filter="*" class="filter-active">All</li>
                     <li data-filter=".filter-app">App</li>
@@ -542,8 +600,13 @@
             <div class="row g-0 portfolio-container">
               <div v-for="vImage in posts" :key="vImage.Id">
                 <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item">
-                  <img :src="vImage.url" class="img-fluid" v-bind:alt="vImage.description"
-                    v-bind:title="vImage.description" style="width: 1024px; height: 300px" />
+                  <img
+                    :src="vImage.url"
+                    class="img-fluid"
+                    v-bind:alt="vImage.description"
+                    v-bind:title="vImage.description"
+                    style="width: 1024px; height: 300px"
+                  />
                   <div class="portfolio-info">
                     <h4>{{ vImage.title }}</h4>
                     <!-- <a
@@ -554,8 +617,9 @@
                           ><i class="bi bi-zoom-in"></i
                         ></a> -->
 
-                    <router-link to="/Gallery" title="More Details" class="details-link"><i
-                        class="bi bi-link-45deg"></i></router-link>
+                    <router-link to="/Gallery" title="More Details" class="details-link"
+                      ><i class="bi bi-link-45deg"></i
+                    ></router-link>
                   </div>
                 </div>
               </div>
@@ -804,20 +868,51 @@
             </div>
 
             <div class="col-lg-8">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form
+                action="forms/contact.php"
+                method="post"
+                role="form"
+                class="php-email-form"
+              >
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required
+                    />
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="Your Email"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                  />
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    placeholder="Message"
+                    required
+                  ></textarea>
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>
@@ -854,8 +949,10 @@ export default {
     });
     try {
       //const response =https://localhost:7104/api/ http://localhost:5072/api/
+      var apihostname = this.$apihostname;
+
       axios
-        .get("http://localhost:5072/api/GalleryAlbum/JsonGetImageAlbum")
+        .get(apihostname.concat("/api/GalleryAlbum/JsonGetImageAlbum"))
         .then((response) => {
           this.posts = response.data;
         });
