@@ -15,18 +15,17 @@
 <template>
   <div class="HomePage">
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
-      <div
-        class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
-        data-aos="zoom-out"
-      >
-        <img src="/img/logo-2.jpg" class="img-fluid animated" />
-        <h2><span>Bihar Samaj - Abu Dhabi UAE</span></h2>
-        <!-- <h4><span>ख्वाहिश नहीं मुझे,मशहूर होने की,आप मुझे पहचानते हो,बस इतना ही काफी है,</span></h4> -->
+      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+        data-aos="zoom-out">
+        <img src="/img/logo-new_T.png" class="img-fluid animated" />
+        <h2><span>Bihar Samaj - Abu Dhabi UAE</span></h2>        
         <p>ख्वाहिश नहीं मुझे,मशहूर होने की,आप मुझे पहचानते हो,बस इतना ही काफी है,</p>
-        <div class="d-flex">
+           <div class="d-flex">
           <a href="#" class="btn-get-started scrollto">मुंशी प्रेमचंद</a>
-          <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
-        </div>
+                </div>
+                <p></p>
+        <p></p>
+        <p></p>
       </div>
     </section>
 
@@ -51,7 +50,7 @@
           <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-5">
               <div class="about-img">
-                <img src="/img/about.jpg" class="img-fluid" alt="" />
+                <img src="/img/about_J.jpg" class="img-fluid" alt="" />
               </div>
             </div>
 
@@ -61,9 +60,7 @@
               <!-- Tabs -->
               <ul class="nav nav-pills mb-3">
                 <li>
-                  <a class="nav-link active" data-bs-toggle="pill" href="#tab1"
-                    >About Bihar Samaj UAE</a
-                  >
+                  <a class="nav-link active" data-bs-toggle="pill" href="#tab1">About Bihar Samaj UAE</a>
                 </li>
                 <!-- <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Our Moto</a></li>
                             <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Our Mission</a></li> -->
@@ -234,9 +231,7 @@
                     our socity people.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/ChhatPuja" class="buy-btn"
-                      >Know More</router-link
-                    >
+                    <router-link to="/EventDetails/ChhatPuja" class="buy-btn">Know More</router-link>
                   </div>
                 </div>
               </div>
@@ -266,9 +261,7 @@
                     help of our socity people.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/VatSawitriPuja" class="buy-btn"
-                      >Know More</router-link
-                    >
+                    <router-link to="/EventDetails/VatSawitriPuja" class="buy-btn">Know More</router-link>
                   </div>
                 </div>
               </div>
@@ -297,9 +290,7 @@
                     with the help of our socity people.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/MakarSankranti" class="buy-btn"
-                      >Know More</router-link
-                    >
+                    <router-link to="/EventDetails/MakarSankranti" class="buy-btn">Know More</router-link>
                   </div>
                 </div>
               </div>
@@ -325,8 +316,7 @@
                   </p>
                   <div class="text-center mt-auto">
                     <router-link to="/EventDetails/Holi" class="buy-btn">
-                      Know More</router-link
-                    >
+                      Know More</router-link>
                   </div>
                 </div>
               </div>
@@ -350,9 +340,7 @@
                     state of Bihar and is enjoyed by people across different regions.
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/LittiChokhaPartry" class="buy-btn"
-                      >Know More</router-link
-                    >
+                    <router-link to="/EventDetails/LittiChokhaPartry" class="buy-btn">Know More</router-link>
                   </div>
                 </div>
               </div>
@@ -377,8 +365,7 @@
                     enriching experience. Here are some details to keep in mind:
                   </p>
                   <div class="text-center mt-auto">
-                    <router-link to="/EventDetails/BAPSTempleVisit" class="buy-btn"
-                      >Know More
+                    <router-link to="/EventDetails/BAPSTempleVisit" class="buy-btn">Know More
                     </router-link>
                   </div>
                 </div>
@@ -413,7 +400,9 @@
           <br />
           <br />
           <div class="text-center mt-auto">
-            <a href="#" class="buy-btn">Know More</a>
+
+            <router-link to="/Events" class="buy-btn">Know More
+            </router-link>
           </div>
         </div>
       </section>
@@ -426,17 +415,12 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img
-                    src="/img/testimonials/testimonials-1.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
+                  <img src="/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="" />
                   <h3>Abhishek Sharma</h3>
                   <h4>Founder</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
@@ -449,17 +433,12 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img
-                    src="/img/testimonials/testimonials-2.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
+                  <img src="/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
                   <h3>Jai Prakash</h3>
                   <h4>Designer</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
@@ -472,17 +451,12 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img
-                    src="/img/testimonials/testimonials-3.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
+                  <img src="/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="" />
                   <h3>Manoj Kumar</h3>
                   <h4>Store Owner</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
@@ -495,17 +469,12 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img
-                    src="/img/testimonials/testimonials-4.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
+                  <img src="/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="" />
                   <h3>Munna Kumar</h3>
                   <h4>Freelancer</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
@@ -518,17 +487,12 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img
-                    src="/img/testimonials/testimonials-5.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
+                  <img src="/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
                   <h3>Ravi Pratap</h3>
                   <h4>Media Head</h4>
                   <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
@@ -548,22 +512,40 @@
       <!-- End Testimonials Section -->
       <!-- ======= Pricing Section ======= -->
       <section id="pricing" class="pricing">
-        <br /><br />
         <div class="container" data-aos="fade-up">
           <div class="section-header">
             <h2>Up Coming Events</h2>
+           
           </div>
+          <div class="row gy-4">
 
-          <div class="row gy-4"></div>
-          <br />
-          <div class="text-center mt-auto">
-            <a
-              asp-action="Create"
-              asp-controller="EventBooking"
-              class="buy-btn"
-              target="_blank"
-              >Book Now</a
-            >
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200" v-for="(vEvent,index) in eventsdata" :key="index">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <br/>
+                  
+                  <h3>{{ vEvent.title }}</h3>
+                  <h5>{{ vEvent.description }}</h5>
+                </div>
+                <ul>
+                  <li></li>
+                  <li><i class="bi bi-dot"></i> <span> Event Date : <date-format :date=vEvent.eventDate /> </span>
+                  <!-- {{ vEvent.eventDate}} -->
+                  </li>
+                  <li><i class="bi bi-dot"></i> <span> Event Time : {{ vEvent.eventTimeString }} </span></li>
+
+                  <li><i class="bi bi-dot"></i> <span> Event Venue :{{ vEvent.eventVenue }}</span></li>
+                </ul>
+                <div class="text-center mt-auto">
+               
+                  <router-link :to="{ name: 'EventBooking', params: { Id: vEvent.id } }"
+                        class="buy-btn"> Book Now
+                      </router-link>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -583,12 +565,8 @@
         </div>
 
         <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
-          <div
-            class="portfolio-isotope"
-            data-portfolio-filter="*"
-            data-portfolio-layout="masonry"
-            data-portfolio-sort="original-order"
-          >
+          <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+            data-portfolio-sort="original-order">
             <!--<ul class="portfolio-flters">
                     <li data-filter="*" class="filter-active">All</li>
                     <li data-filter=".filter-app">App</li>
@@ -598,15 +576,10 @@
                 </ul> End Portfolio Filters -->
 
             <div class="row g-0 portfolio-container">
-              <div v-for="vImage in posts" :key="vImage.Id">
+              <div v-for="vImage in gallaryalbum" :key="vImage.Id">
                 <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item">
-                  <img
-                    :src="vImage.url"
-                    class="img-fluid"
-                    v-bind:alt="vImage.description"
-                    v-bind:title="vImage.description"
-                    style="width: 1024px; height: 300px"
-                  />
+                  <img :src="vImage.url" class="img-fluid" v-bind:alt="vImage.description"
+                    v-bind:title="vImage.description" style="width: 1024px; height: 300px" />
                   <div class="portfolio-info">
                     <h4>{{ vImage.title }}</h4>
                     <!-- <a
@@ -617,9 +590,8 @@
                           ><i class="bi bi-zoom-in"></i
                         ></a> -->
 
-                    <router-link to="/Gallery" title="More Details" class="details-link"
-                      ><i class="bi bi-link-45deg"></i
-                    ></router-link>
+                    <router-link to="/Gallery" title="More Details" class="details-link"><i
+                        class="bi bi-link-45deg"></i></router-link>
                   </div>
                 </div>
               </div>
@@ -868,51 +840,20 @@
             </div>
 
             <div class="col-lg-8">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                      required
-                    />
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      required
-                    />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
                 </div>
                 <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    placeholder="Message"
-                    required
-                  ></textarea>
+                  <textarea class="form-control" name="message" placeholder="Message" required></textarea>
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>
@@ -933,12 +874,14 @@
 </template>
 <script>
 import axios from "axios";
+
 export default {
   name: "HomePage",
   //el: '#ImageLists',
   data() {
     return {
-      posts: [],
+      gallaryalbum: [],
+      eventsdata: [],
     };
   },
 
@@ -954,13 +897,20 @@ export default {
       axios
         .get(apihostname.concat("/api/GalleryAlbum/JsonGetImageAlbum"))
         .then((response) => {
-          this.posts = response.data;
+          this.gallaryalbum = response.data;
         });
       // JSON responses are automatically parsed.
-      // this.posts =response.data.results;
-      console.log(this.posts);
-      //console.log(response.status);
-      //console.log(response.headers);
+
+      console.log(this.gallaryalbum);
+
+      axios
+        .get(apihostname.concat("/api/Event"))
+        .then((response) => {
+          this.eventsdata = response.data;
+        });
+      // JSON responses are automatically parsed.
+
+      console.log(this.eventsdata);
     } catch (error) {
       console.log(error);
     }

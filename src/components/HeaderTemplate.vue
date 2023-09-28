@@ -8,7 +8,7 @@
     >
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1>Bihar Samaj<span>.</span></h1>
+      <h1>Bihar Samaj Abu Dhabi<span>.</span></h1>
     </router-link>
 
     <nav id="navbar" class="navbar">

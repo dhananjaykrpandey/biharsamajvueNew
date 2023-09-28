@@ -7,13 +7,14 @@ import VueScrollTo from 'vue-scrollto'
 import App from './App.vue'
 import router from './router'
 import VueEasyLightbox from 'vue-easy-lightbox'
+import DateFormat from '@voidsolutions/vue-dateformat'
 
 //import axios from 'axios'
 const app = createApp(App)
-app.config.globalProperties.$apihostname='https://localhost:7104'//http://localhost:5072
+app.config.globalProperties.$apihostname='http://localhost:5072'//https://localhost:7104
 
 app.use(createPinia())
-
+app.use(DateFormat);
 app.use(router)
 app.use(VueScrollTo)
 app.use(VueEasyLightbox)
