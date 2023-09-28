@@ -11,7 +11,7 @@ import DateFormat from '@voidsolutions/vue-dateformat'
 
 //import axios from 'axios'
 const app = createApp(App)
-app.config.globalProperties.$apihostname='http://localhost:5072'//https://localhost:7104
+app.config.globalProperties.$apihostname='https://localhost:7104'//http://localhost:5072
 
 app.use(createPinia())
 app.use(DateFormat);

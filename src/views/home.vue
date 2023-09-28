@@ -519,7 +519,8 @@
           </div>
           <div class="row gy-4">
 
-            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200" v-for="(vEvent,index) in eventsdata" :key="index">
+            <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="200" 
+            v-for="(vEvent,index) in eventsdata" :key="index" v-if= "eventsdata.length===0">
               <div class="pricing-item featured">
                 <div class="pricing-header">
                   <br/>
@@ -536,7 +537,7 @@
 
                   <li><i class="bi bi-dot"></i> <span> Event Venue :{{ vEvent.eventVenue }}</span></li>
                 </ul>
-                <div class="text-center mt-auto">
+                <div class="text-center mt-auto" :disabled="vEvent.acceptBooking">
                
                   <router-link :to="{ name: 'EventBooking', params: { Id: vEvent.id } }"
                         class="buy-btn"> Book Now
@@ -545,7 +546,88 @@
 
               </div>
             </div>
+            <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="200" 
+            v-for="(vEvent,index) in eventsdata" :key="index" v-if= "eventsdata.length===1">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <br/>
+                  
+                  <h3>{{ vEvent.title }}</h3>
+                  <h5>{{ vEvent.description }}</h5>
+                </div>
+                <ul>
+                  <li></li>
+                  <li><i class="bi bi-dot"></i> <span> Event Date : <date-format :date=vEvent.eventDate /> </span>
+                  <!-- {{ vEvent.eventDate}} -->
+                  </li>
+                  <li><i class="bi bi-dot"></i> <span> Event Time : {{ vEvent.eventTimeString }} </span></li>
+                  <li><i class="bi bi-dot"></i> <span> Event Venue :{{ vEvent.eventVenue }}</span></li>
+                  <li><i class="bi bi-dot"></i> <span> Accept Booking : {{ vEvent.acceptBooking ? ' Yes' :' No' }}</span></li>
+                </ul>
+                <div class="text-center mt-auto" :disabled="vEvent.acceptBooking">
+               
+                  <router-link :to="{ name: 'EventBooking', params: { Id: vEvent.id } }"
+                        class="buy-btn"> Book Now
+                      </router-link>
+                </div>
 
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200" 
+            v-for="(vEvent,index) in eventsdata" :key="index" v-if= "eventsdata.length===2">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <br/>
+                  
+                  <h3>{{ vEvent.title }}</h3>
+                  <h5>{{ vEvent.description }}</h5>
+                </div>
+                <ul>
+                  <li></li>
+                  <li><i class="bi bi-dot"></i> <span> Event Date : <date-format :date=vEvent.eventDate /> </span>
+                  <!-- {{ vEvent.eventDate}} -->
+                  </li>
+                  <li><i class="bi bi-dot"></i> <span> Event Time : {{ vEvent.eventTimeString }} </span></li>
+
+                  <li><i class="bi bi-dot"></i> <span> Event Venue : {{ vEvent.eventVenue }}</span></li>
+                  <li><i class="bi bi-dot"></i> <span> Accept Booking : {{ vEvent.acceptBooking ? ' Yes' :' No' }}</span></li>
+                </ul>
+                <div class="text-center mt-auto"  :hidden="vEvent.acceptBooking===false">
+               
+                  <router-link :to="{ name: 'EventBooking', params: { Id: vEvent.id } }"
+                        class="buy-btn"> Book Now
+                      </router-link>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200" 
+            v-for="(vEvent,index) in eventsdata" :key="index" v-if= "eventsdata.length>2">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <br/>
+                  
+                  <h3>{{ vEvent.title }}</h3>
+                  <h5>{{ vEvent.description }}</h5>
+                </div>
+                <ul>
+                  <li></li>
+                  <li><i class="bi bi-dot"></i> <span> Event Date : <date-format :date=vEvent.eventDate /> </span>
+                  <!-- {{ vEvent.eventDate}} -->
+                  </li>
+                  <li><i class="bi bi-dot"></i> <span> Event Time : {{ vEvent.eventTimeString }} </span></li>
+                  <li><i class="bi bi-dot"></i> <span> Event Venue :{{ vEvent.eventVenue }}</span></li>
+                  <li><i class="bi bi-dot"></i> <span> Accept Booking : {{ vEvent.acceptBooking ? ' Yes' :' No' }}</span></li>
+                </ul>
+                <div class="text-center mt-auto" :disabled="vEvent.acceptBooking">
+               
+                  <router-link :to="{ name: 'EventBooking', params: { Id: vEvent.id } }"
+                        class="buy-btn"> Book Now
+                      </router-link>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -882,9 +964,15 @@ export default {
     return {
       gallaryalbum: [],
       eventsdata: [],
+      eventsdatacount:0,
     };
   },
-
+  methods:{
+    myFunction: function () {		
+		this.eventsdatacount = this.eventsdata.length;
+		
+    }
+	},
   mounted() {
     //lightbox settings
     this.lightbox = GLightbox({

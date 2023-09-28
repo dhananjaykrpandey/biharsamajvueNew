@@ -30,7 +30,10 @@
               </div><!-- End meta top -->
               <div class="comments">
                 <div class="reply-form">
-                  <form id="quickForm" method="post">
+                  <form v-on:submit.prevent="submitForm">
+                    <!-- id="quickForm" method="post"  -->
+                    <input  class="form-control" name="id" id="id"  hidden  v-model="form.eventId" />
+                        
                     <div class="row">
                       <div class="form-group" hidden>
                                                 <input  class="form-control"  />
@@ -40,37 +43,37 @@
                     <div class="row">
                       <div class="col form-group">
 
-                        <input  class="form-control" name="Name" id="Name" placeholder="Name *" />
+                        <input  class="form-control" name="name" id="name" placeholder="Name *"  v-model="form.name" />
                         
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-6 form-group">
 
-                        <input  class="form-control" name="PhoneNumber" id="PhoneNumber"
-                          placeholder="Phone Number *" type="tel" />
+                        <input  class="form-control" name="phoneNumber" id="phoneNumber"
+                          placeholder="Phone Number *" type="tel" v-model="form.phoneNumber"/>
                     
                       </div>
                       <div class="col-md-6 form-group">
 
-                        <input class="form-control" name="Email" id="Email"
-                          placeholder="Email Address *" type="email" />
+                        <input class="form-control" name="email" id="email"
+                          placeholder="Email Address *" type="email" v-model="form.email"/>
                        
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-4 form-group">
 
-                        <input  class="form-control" name="NoOfSeat" id="NoOfSeat"
-                          placeholder="No Of Seat *" />
+                        <input  class="form-control" name="noOfSeat" id="noOfSeat"
+                          placeholder="No Of Seat *" v-model="form.noOfSeat"/>
                        
                       </div>
                     </div>
                     <div class="row">
                       <div class="col form-group">
 
-                        <textarea  name="Remarks"  id="Remarks" class="form-control"
-                          placeholder="Comment/Remarks *"></textarea>
+                        <textarea  name="remarks"  id="remarks" class="form-control"
+                          placeholder="Comment/Remarks *" v-model="form.remarks"></textarea>
                       
                       </div>
                     </div>
@@ -162,8 +165,32 @@ export default {
   data() {
     return {
       EventDetails: [],
+      form: {
+                name: '',
+                email: '',
+                noOfSeat: '',
+                remarks: '',
+                phoneNumber: '',
+                eventId:this.$route.params.Id,
+                
+            }
     };
   },
+ methods: {
+  
+  submitForm()
+      {
+        var apihostname = this.$apihostname;
+            axios.post(apihostname.concat('/api/EventBooking'), this.form)
+                 .then((res) => {
+                     //Perform Success Action
+                 })
+                 .catch((error) => {
+                     // error.response.status Check status code
+                 }).finally(() => {
+                     //Perform action in always
+                 });
+  }}, 
   mounted() {
    
     try {
