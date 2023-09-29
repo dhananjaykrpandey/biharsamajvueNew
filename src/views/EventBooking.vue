@@ -161,6 +161,8 @@
 </template>
 <script>
 import axios from "axios";
+import swal from 'sweetalert2';
+import { resolveDirective } from "vue";
 export default {
   data() {
     return {
@@ -184,11 +186,17 @@ export default {
             axios.post(apihostname.concat('/api/EventBooking'), this.form)
                  .then((res) => {
                      //Perform Success Action
-                 })
+                     var bookingid = res.data.id;
+                     console.log(res.data);
+                     console.log(bookingid);
+                     swal.fire('Your booking save successfully!! \n You will recivie booking confirmation and invition of your booking \n\n\ your booking reference number \n\n  ' + bookingid);
+                                      })
                  .catch((error) => {
                      // error.response.status Check status code
+                     swal.fire(error);
                  }).finally(() => {
                      //Perform action in always
+                     router.push({ path: '/home', replace: true })
                  });
   }}, 
   mounted() {
